@@ -16,5 +16,17 @@ namespace House
         {
             InitializeComponent();
         }
+        TheHouse house;
+        Graphics g;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            g = this.CreateGraphics();
+            house = new TheHouse();
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Drawer.Draw(g);
+        }
     }
 }
